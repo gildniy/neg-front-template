@@ -1,0 +1,366 @@
+/**
+* LAYOUTS - HEADER
+*/
+
+.main-nav {
+  height: auto;
+  position: absolute;
+  width: 100%;
+}
+
+.social-search > li {
+  float: left;
+  margin: 0;
+}
+
+/* Search feature */
+a.social-search-btn {
+  color: $grey-color;
+  font-family: sans-serif;
+  height: 50px;
+  margin: 0;
+  padding: 10px 0;
+  text-decoration: none;
+  transition: all 0.1s ease;
+  &:hover {
+    transition: all 0.3s ease;
+  }
+
+  &#search {
+    filter: FlipH; /* Gecko */
+    transform: scaleX(-1); /* Opera */
+    -moz-transform: scaleX(-1); /* Webkit */
+    -o-transform: scaleX(-1); /* Standard */
+    -webkit-transform: scaleX(-1); /* IE 6/7/8 */
+  }
+}
+
+.navbar-brand.logo,
+.navbar-brand.logo:hover,
+.social-search-btn > i {
+  color: $white-color;
+  font-size: 20px;
+  @include elegant-shadow;
+}
+
+.hidden {
+  display: none;
+}
+
+.search_box {
+  background: transparent; //#84d3ce
+  clear: both;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  @include transition(all, .1s, ease-in-out);
+  width: 100%;
+  z-index: 1000;
+  &.active {
+    height: auto;
+    padding: 15px 0;
+  }
+
+  input {
+    background: $white-color;
+    border: 0;
+    color: $primary-color;
+    font-size: 13px;
+    margin: 0 0 0 15px;
+    padding: 10px;
+    width: 87%;
+    &:focus {
+      outline: none;
+    }
+    &.search_icon {
+      background: $grey-color;
+      border: 0;
+      border-bottom-left-radius: 0;
+      -webkit-border-bottom-left-radius: 0;
+      -moz-border-radius-bottomleft: 0;
+      -moz-border-radius-topleft: 0;
+      border-top-left-radius: 0;
+      -webkit-border-top-left-radius: 0;
+      clear: both;
+      color: $white-color;
+      cursor: pointer;
+      height: auto;
+      margin: 0;
+      margin-left: -5px;
+      opacity: 1;
+      padding: 10px;
+      transition: all .1s ease;
+      width: 10%;
+    }
+    &.search_icon:hover {
+      background: $primary-color;
+    }
+    &.search_field {
+      border-bottom-right-radius: 0;
+      -webkit-border-bottom-right-radius: 0;
+      -moz-border-radius-bottomright: 0;
+      -moz-border-radius-topright: 0;
+      border-top-right-radius: 0;
+      -webkit-border-top-right-radius: 0;
+    }
+  }
+}
+
+/* Spinner button for menus Mobile devices */
+
+.spinner-master {
+  height: 0;
+  input[type=checkbox] {
+    display: none;
+  }
+}
+
+@media all and (max-width: 767px) {
+
+  /* Search feature */
+
+  #search {
+    padding: auto;
+  }
+
+  .social-search {
+    margin: 0;
+  }
+
+  .smallnav {
+    .spinner-master,
+    a.social-search-btn > i {
+      @include transition2(margin, 0.3s, ease, height, 0.3s, ease);
+    }
+
+    .spinner-master {
+      margin: 5px 0;
+    }
+
+    .navbar-brand.logo {
+      margin-left: -4px;
+    }
+  }
+
+  .search_box {
+    input {
+      width: 70%;
+      margin: 0;
+      &.search_icon {
+        width: 30%;
+      }
+    }
+  }
+
+  a.social-search-btn > i {
+    margin-top: 5px;
+  }
+
+  /* Spinner button for menus Mobile devices */
+
+  .spinner-master {
+    position: relative;
+    margin: 10px 0;
+    height: 30px;
+    width: 30px;
+    float: left;
+
+    * {
+      box-sizing: border-box;
+      transition: all 0.3s;
+    }
+
+    label {
+      cursor: pointer;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 5px;
+      width: 100%;
+      z-index: 99;
+    }
+
+    .spinner {
+      background-color: $white-color;
+      height: 4px;
+      padding: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    .diagonal.part-1 {
+      float: left;
+      position: relative;
+    }
+
+    .horizontal {
+      float: left;
+      margin-top: 4px;
+      position: relative;
+    }
+
+    .diagonal.part-2 {
+      margin-top: 4px;
+      position: relative;
+      float: left;
+    }
+
+    input[type=checkbox]:checked ~ .spinner-spin > {
+      .horizontal {
+        opacity: 0;
+      }
+      .diagonal.part-1 {
+        margin-top: 10px;
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+      }
+      .diagonal.part-2 {
+        margin-top: -12px;
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+      }
+    }
+  }
+
+  .menu {
+    border: 0;
+    clear: both;
+    float: none;
+    min-width: inherit;
+  }
+}
+
+.navbar-default {
+  background-color: rgba($primary-color, .5);
+  border-bottom-color: rgba($primary-color, .2);
+  @include border-radius(0);
+  border-top: 0;
+  clear: both;
+  color: $nav-text-color;
+  height: auto;
+  @include transition(height, .5s, ease);
+  z-index: 500;
+
+  &.smallnav {
+    background-color: rgba($secondary-color, .5);
+    min-height: 40px;
+    .social-search-btn,
+    .navbar-nav > li > a {
+      height: 40px;
+      margin: 0;
+      padding: 5px 15px;
+    }
+
+    .navbar-brand.logo {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 800;
+      height: 40px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      @include elegant-shadow;
+    }
+    @include transition(min-height, .3s, ease-in);
+
+    .navbar-nav > li.active a {
+      color: $secondary-color;
+      &:hover {
+        color: rgba($secondary-color, .5);
+        @include transition(color, .3s, ease-in);
+      }
+    }
+
+    .search_box input {
+      color: $secondary-color;
+      &.search_icon {
+        background: $grey-color;
+        color: $white-color;
+      }
+      &.search_icon:hover {
+        background: $secondary-color;
+      }
+    }
+  }
+
+  .navbar-nav > li {
+    background-color: transparent;
+
+    a, a:hover {
+      color: $white-color;
+    }
+
+    &.active a {
+      background-color: $white-color;
+      @include add-border (medium, $white-color, bottom);
+      color: $secondary-color;
+      &:hover {
+        background-color: $white-color;
+        color: $primary-color;
+        @include transition(color, .3s, ease-in);
+      }
+    }
+  }
+
+  @media all and (min-width: 769px) {
+
+    .navbar-nav > li {
+      @include add-border (medium, $neutral-color, bottom);
+      &:hover {
+        @include add-border (medium, $white-color, bottom);
+        @include transition(border, .3s, ease-in);
+      }
+      &.active:hover {
+        @include add-border (medium, $neutral-color, bottom);
+        @include transition(border, .3s, ease-in);
+      }
+    }
+
+    &.smallnav {
+      min-height: 33px;
+
+      .navbar-nav > li.active {
+        @include add-border (medium, $white-color, bottom);
+      }
+
+      .social-search-btn,
+      .navbar-brand.logo,
+      .navbar-nav > li > a {
+        height: 33px;
+      }
+
+      .navbar-brand.shown {
+        margin-right: 88px;
+      }
+
+      .navbar-brand.logo {
+        padding-top: 6px;
+      }
+
+    }
+
+    .navbar-margin {
+      margin-left: 130px;
+    }
+  }
+
+  @media all and (width: 768px) {
+
+    .navbar-margin {
+      margin-left: 42px;
+    }
+    &.smallnav .navbar-brand.logo {
+      padding-top: 6px;
+    }
+  }
+
+  .navbar-brand,
+  .social-search-btn {
+    @include transition2(padding, .3s, ease, height, .3s, ease);
+  }
+
+  .navbar-nav > li > a {
+    @include transition(padding, .3s, ease);
+  }
+}
+
+

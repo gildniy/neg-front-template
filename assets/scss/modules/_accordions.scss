@@ -1,0 +1,18 @@
+/**
+* MODULES - ACCORDIONS
+*/
+
+//.panel-heading, .panel-body {
+//  @include border-radius($default-border-radius)
+//}
+
+.panel {
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -o-box-shadow: none;
+
+  a, a:hover, a:active, a:focus {
+    text-decoration: none;
+  }
+}

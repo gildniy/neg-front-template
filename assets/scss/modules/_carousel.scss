@@ -1,0 +1,60 @@
+/**
+* MODULES - CAROUSEL
+*/
+
+.carousel {
+  margin-bottom: 20px;
+}
+
+.carousel img {
+  padding: 5px;
+  @include add-border(1px, $default-color, all);
+}
+
+.carousel-control {
+  color: rgba($primary-color, .2);
+  text-shadow: 0 1px 2px rgba($secondary-color, .2);
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+  color: $primary-color;
+}
+
+.carousel-control .fa-arrow-circle-left,
+.carousel-control .fa-arrow-circle-right {
+  display: inline-block;
+  margin-top: -10px;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+}
+
+.carousel-control .fa-arrow-circle-left {
+  left: 50%;
+  margin-left: -10px;
+}
+
+.carousel-control .icon-next,
+.carousel-control .fa-arrow-circle-right {
+  margin-right: -10px;
+  right: 50%;
+}
+
+.carousel-indicators li {
+  @include add-border(2px, $primary-color, all);
+  border-radius: $default-border-radius;
+  height: 10px;
+  margin: 2px;
+}
+
+.carousel-indicators .active {
+  background-color: $primary-color;
+  height: 15px;
+  width: 15px;
+}

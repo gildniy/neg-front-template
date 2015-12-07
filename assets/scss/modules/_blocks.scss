@@ -1,0 +1,98 @@
+/**
+* MODULES - BLOCKS
+*/
+
+.block-stat {
+  @extend %block;
+  @include add-background($default-color);
+  &:hover {
+    @include add-background($white-color);
+  }
+  a {
+    width: 100%;
+  }
+}
+
+.block-recent {
+  @extend %block;
+  @include add-background($white-color);
+  margin: 70px 10px -280px;
+  min-height: 620px;
+  padding: 10px;
+  z-index: 100;
+  @include add-border(1px, $default-color, all);
+  @media all and (max-width: 768px) {
+    z-index: 1;
+    margin: -60px 10px 10px;
+  }
+}
+
+.block-trust {
+  @extend %block;
+  @include add-background(rgba($default-color, .3));
+  a.truster {
+    @include add-border(1px, $default-color, all);
+    @include border-radius($default-border-radius);
+    height: auto;
+    padding: 10px;
+    vertical-align: top;
+    @include add-background($white-color);
+  }
+  &:hover {
+    @include add-background(rgba($default-color, .8));
+  }
+}
+
+.block-default {
+  @extend %block;
+  @include add-background($default-color);
+}
+
+.block-white {
+  @extend %block;
+  @include add-background($white-color);
+}
+
+.block-primary {
+  @extend %block;
+  @include add-background($primary-color);
+}
+
+.block-primary-head {
+  h3 {
+    font-size: 18px;
+    @include add-background($primary-color);
+    margin: 0;
+    padding: 15px 5px 15px 10px
+  }
+
+  .block-content {
+    @include add-border(1px, $default-color, all);
+    padding: 10px;
+  }
+
+  iframe {
+    width: 100%;
+    @include add-border(1px, rgba($grey-color, .3), all);
+  }
+}
+
+.block-icon {
+  min-height: 100px;
+
+  h3 {
+    margin: 0;
+    padding: 0 0 2px;
+  }
+
+  .icon {
+    float: left;
+    margin-top: 10px;
+    width: 20%;
+  }
+
+  .icon-content {
+    float: left;
+    width: 70%;
+  }
+}

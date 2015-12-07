@@ -1,0 +1,24 @@
+/**
+* BASE - BASE
+*/
+/**
+* Navigation specific css styles
+*/
+@import "http://webfonts.ru/import/osans.css";
+
+/*
+	Open Sans, 300, 300 italic, 400, 400 italic, 600, 600 italic, 700, 700 italic, 800, 800 italic
+*/
+
+body {
+  background-color: $body-bg-color;
+  color: $body-text-color;
+  font-family: $body-font-family;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+}
+
+.img-bordered {
+  padding: 3px;
+  @include add-border(1px, $default-color, all);
+}

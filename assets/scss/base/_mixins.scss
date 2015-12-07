@@ -1,0 +1,75 @@
+/**
+* BASE - MIXINS
+*/
+
+@mixin transition($property, $speed, $effect) {
+  transition: $property $speed $effect;
+  -moz-transition: $property $speed $effect;
+  -webkit-transition: $property $speed $effect;
+  -o-transition: $property $speed $effect;
+}
+
+@mixin transition2($property1, $speed1, $effect1,$property2, $speed2, $effect2) {
+  transition: $property1 $speed1 $effect1, $property2 $speed2 $effect2;
+  -moz-transition: $property1 $speed1 $effect1, $property2 $speed2 $effect2;
+  -ms-transition: $property1 $speed1 $effect1, $property2 $speed2 $effect2;
+  -webkit-transition: $property1 $speed1 $effect1, $property2 $speed2 $effect2;
+}
+
+@mixin hover-bg($color) {
+  background-color: rgba($color, .8);
+  &:hover {
+    @if ($color == $button-white-bg-color) {
+      background-color: rgba($default-color, .3);
+    } @else {
+      background-color: $color;
+    }
+  }
+  @include transition2(background-color, 100ms, ease-in, color, 100ms, ease-in);
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+@mixin link-color {
+  //  Here will desplay link colors base on the sections
+}
+
+@mixin elegant-shadow() {
+  text-shadow: $shadow;
+}
+
+@mixin add-border($size, $color, $position) {
+  @if $position == 'all' {
+    border: $size solid $color;
+  } @else if $position == 'top' {
+    border-top: $size solid $color;
+  } @else if $position == 'bottom' {
+    border-bottom: $size solid $color;
+  } @else if $position == 'right' {
+    border-right: $size solid $color;
+  } @else if $position == 'left' {
+    border-left: $size solid $color;
+  } @else if $position == 'top-bottom' {
+    border-bottom: $size solid $color;
+    border-top: $size solid $color;
+  } @else if $position == 'right-left' {
+    border-left: $size solid $color;
+    border-right: $size solid $color;
+  }
+}
+
+@mixin add-background($color) {
+  background: $color;
+  @if $color == $white-color or $color == $default-color {
+    color: $secondary-color !important;
+    h2.page-header {
+      color: $primary-color !important;
+    }
+  } @else {
+    color: $white-color !important;
+  }
+}

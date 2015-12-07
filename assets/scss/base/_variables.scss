@@ -1,0 +1,97 @@
+/**
+* BASE - VARIABLES
+*/
+
+/**
+* Main Colors
+*/
+
+$white-color: #fff;
+$default-color: #f0f0f0;
+$grey-color: #8c949d;
+$dark-color: #666;
+$black-color: #000;
+$primary-color: #0aab9f;
+$secondary-color: #365977;
+$notice-color: #f8d034;
+$error-color: #9d73c9;
+$neutral-color: transparent;
+
+$shadow: 0 1px 0 rgba(44, 44, 44, 0.69);
+
+/**
+* Default Header elements weight
+*/
+
+$hs-font-weight: 600;
+$input-focus-bg: #fff7ab;
+
+/**
+* Body style
+*/
+
+$body-bg-color: $white-color;
+
+/**
+* Typography
+*/
+
+$body-text-color: $secondary-color;
+$body-font-family: "Open Sans", sans-serif;
+$body-font-size: 1em;
+$body-line-height: 1.5em;
+
+$link-color: $primary-color;
+$link-weight: 600;
+$link-decoration: none;
+
+/**
+* Buttons
+*/
+
+$default-border-radius: 3px;
+
+$button-default-bg-color: $default-color;
+$button-white-bg-color: $white-color;
+$button-primary-bg-color: $primary-color;
+$button-secondary-bg-color: $secondary-color;
+$button-notice-bg-color: $notice-color;
+$button-error-bg-color: $error-color;
+
+$button-default-text-color: $dark-color;
+$button-no-default-text-color: $white-color;
+$button-white-text-color: $primary-color;
+$button-primary-text-color: $button-no-default-text-color;
+$button-secondary-text-color: $button-no-default-text-color;
+$button-notice-text-color: $button-no-default-text-color;
+$button-error-text-color: $button-no-default-text-color;
+
+/**
+* Navigation
+*/
+
+$nav-text-color: $dark-color;
+$nav-link-color: $white-color;
+
+/**
+* Sections
+*/
+
+/* intro */
+
+$intro-bg-img: '../img/show1.png';
+$intro-height: 450px;
+$intro-width: 100%;
+
+/* snaps*/
+
+$snaps-bg-img: '../img/school.png';
+$snaps-height: auto;
+$snaps-preview-img: '../img/forum-preview.png';
+
+/* scroll*/
+//TODO: Remove this before deployment!
+
+$scroll-img: '../img/top.png';
+$scroll-width-height: 38px;
+$scroll-right-bottom: 20px;

@@ -1,0 +1,25 @@
+/**
+* LAYOUTS - BLOG
+*/
+
+.blog-post {
+  @include add-border(1px, rgba($grey-color, .3), top);
+  @include add-border(1px, rgba($grey-color, .3), right-left);
+  padding: 15px;
+
+  h2.page-header {
+    margin-top: 5px !important;
+  }
+}
+
+.blog-featured {
+  float: left;
+  margin-right: 15px;
+}
+
+.post-meta {
+  background: $default-color;
+  margin-bottom: 20px;
+  @include add-border(1px, rgba($grey-color, .3), all);
+  padding: 10px 10px 10px 10px;
+}

@@ -1,0 +1,13 @@
+/**
+* MODULES - SCROLLUP
+*/
+
+#scrollUp {
+  background-image: url($scroll-img) !important;
+  @include add-background(darken($secondary-color, 5%));
+  @include border-radius($default-border-radius);
+  bottom: $scroll-right-bottom;
+  height: $scroll-width-height;
+  right: $scroll-right-bottom;
+  width: $scroll-width-height;
+}

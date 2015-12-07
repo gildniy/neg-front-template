@@ -1,0 +1,84 @@
+/**
+* BASE - PLACEHOLDERS
+*/
+
+%no-spacing {
+  margin: 0;
+  padding: 0;
+}
+
+%inline-list {
+  @extend %no-spacing;
+  li {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+%list {
+  margin-bottom: 30px;
+}
+
+%block {
+  @include add-border(1px, $default-color, all);
+  margin-bottom: 15px;
+  padding: 15px;
+
+  h3 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  &.centered {
+    text-align: center !important;
+  }
+
+  &.bordered {
+    @include add-border(1px, rgba($grey-color, .3), all);
+    @include border-radius($default-border-radius);
+  }
+
+  &.block-image {
+    img {
+      width: 100%;
+      @include add-border(1px, rgba($grey-color, .3), all);
+    }
+
+    .fa {
+      color: rgba($secondary-color, .3);
+      margin: 0 5px;
+      padding: 2px 5px;
+      @include add-border(1px, rgba($secondary-color, .3), all);
+      @include border-radius($default-border-radius);
+
+      &:hover {
+        color: $secondary-color !important;
+        @include add-border(1px, $secondary-color, all);
+      }
+      @include transition2(color, .3s, ease-in, border, .3s, ease-in);
+    }
+  }
+
+  a {
+    width: 100%;
+  }
+
+  p {
+    padding: 15px 0;
+    @include add-border(1px, $secondary-color, top);
+  }
+}
+
+%heading {
+  font-size: 1.5em;
+}
+
+%heading-primary {
+  color: $primary-color;
+  @extend %heading;
+}
+
+%heading-secondary {
+  color: $secondary-color;
+  @extend %heading;
+}

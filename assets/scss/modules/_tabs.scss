@@ -1,0 +1,25 @@
+/**
+* MODULES - TABS
+*/
+
+.tab-pane {
+  margin-bottom: 20px;
+  @include border-radius($default-border-radius);
+  padding: 20px 10px;
+}
+
+.tab-primary .tab-pane, .tab-primary .nav-tabs > li.active > a, .tab-primary .nav-tabs > li.active > a:hover, .tab-primary .nav-tabs > li.active > a:focus {
+  @include add-background($primary-color);
+}
+
+.tab-secondary .tab-pane, .tab-secondary .nav-tabs > li.active > a, .tab-secondary .nav-tabs > li.active > a:hover, .tab-secondary .nav-tabs > li.active > a:focus {
+  @include add-background($secondary-color);
+}
+
+.tab-dark .tab-pane, .tab-dark.nav-tabs > li.active > a, .tab-dark .nav-tabs > li.active > a:hover, .tab-dark .nav-tabs > li.active > a:focus {
+  @include add-background($grey-color);
+}
+
+.tab-default .tab-pane, .tab-default .nav-tabs > li.active > a, .tab-default .nav-tabs > li.active > a:hover, .tab-default .nav-tabs > li.active > a:focus {
+  @include add-background($default-color);
+}

@@ -1,0 +1,118 @@
+/**
+* MODULES - TYPOGRAPHY
+*/
+
+a {
+  color: $link-color;
+  font-weight: $link-weight;
+  &:hover {
+    text-decoration: $link-decoration;
+  }
+}
+
+/* Lists */
+
+.list-links {
+  @extend %list;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  li {
+    @include add-border(1px, rgba($white-color, .3), bottom);
+    line-height: 2.2em;
+    a {
+      color: $white-color;
+      font-weight: 100;
+      &:hover {
+        color: rgba($white-color, .6);
+      }
+    }
+    &:last-child {
+      border: 0;
+    }
+  }
+}
+
+/* Icons */
+
+.fa-1 {
+  font-size: 10px;
+}
+
+.fa-2 {
+  font-size: 20px;
+}
+
+.fa-3 {
+  font-size: 30px;
+}
+
+.fa-4 {
+  font-size: 40px;
+}
+
+.fa-5 {
+  font-size: 50px;
+}
+
+.fa-6 {
+  font-size: 60px;
+}
+
+.fa-block {
+  @include add-border(2px, $secondary-color, all);
+  @include border-radius(60px);
+  padding: 13px;
+}
+
+// FROM SKYAPP
+
+.list-comments {
+  margin: 0;
+  padding: 0;
+}
+
+.list-comments li {
+  overflow: auto !important;
+  @include add-border(1px, rgba($grey-color, .3), bottom);
+  padding: 10px 0 5px 0;
+
+  &:last-child {
+    border: none !important;
+  }
+
+  img {
+    margin-right: 10px;
+    width: 100px
+  }
+}
+
+/* Headings */
+
+.heading-primary {
+  @extend %heading-primary;
+}
+
+.heading-primary-a {
+  @extend %heading-primary;
+  @include add-border(2px, $primary-color, bottom);
+}
+
+.heading-secondary {
+  @extend %heading-secondary;
+}
+
+.heading-secondary-a {
+  @extend %heading-secondary;
+  @include add-border(2px, $secondary-color, bottom);
+}
+
+/* Emphasis Text */
+
+.em-primary {
+  color: $primary-color;
+}
+
+.em-secondary {
+  color: $secondary-color;
+}

@@ -1,0 +1,121 @@
+/**
+* COMPONENTS - SECTIONS
+*/
+.section-top-inner {
+  @include add-background($default-color);
+  margin: 57px 0 15px;
+  padding: 25px;
+  text-align: center;
+  @include add-border(5px, $primary-color, bottom);
+  h2 {
+    font-size: 22px !important;
+  }
+}
+
+.section-intro {
+  background: url($intro-bg-img) no-repeat fixed center;
+  min-height: $intro-height;
+
+  .big-image {
+    height: auto;
+    min-height: $intro-height;
+    min-width: $intro-width;
+    position: absolute;
+    width: auto;
+    z-index: -100;
+  }
+
+  .intro-content {
+    .showcase {
+      padding: 150px 15px 100px;
+      text-align: center;
+      z-index: 999;
+      h1 {
+        color: $primary-color;
+        font-size: 2.5em;
+        line-height: 40px;
+        margin-bottom: 20px;
+      }
+      p {
+        color: $white-color;
+        font-size: 1.5em;
+        font-weight: 400;
+      }
+      strong {
+        text-decoration: underline;
+      }
+      a.btn {
+        background-color: rgba($default-color, 1);
+        &:hover {
+          background-color: rgba($default-color, 0);
+          color: $white-color;
+          @include add-border(1px, $white-color, all);
+        }
+        @include transition2(background-color, 100ms, ease-in, color, 100ms, ease-in);
+      }
+    }
+  }
+}
+
+.section-snaps {
+  background: url($snaps-bg-img) repeat top !important;
+  min-height: $snaps-height;
+  .preview-img {
+    background: url($snaps-preview-img) no-repeat center;
+    margin-bottom: -21px;
+    min-height: 311px;
+    position: relative;
+    width: auto;
+  }
+}
+
+.section-white,
+.section-primary,
+.section-secondary {
+  padding: 20px 0;
+  .page-header {
+    font-size: 1.2em;
+    text-align: center;
+  }
+}
+
+.section-white {
+  @include add-background($white-color);
+}
+
+.section-primary {
+  @include add-background($primary-color);
+}
+
+.section-secondary {
+  @include add-background($secondary-color);
+}
+
+.section-testimos {
+  .testimos-widget {
+    height: auto;
+  }
+  .testmos-msg {
+    padding: 30px 0;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .quote {
+    color: rgba($white-color, .2);
+  }
+  .picture-author {
+    padding: 10px 0;
+    * {
+      display: block;
+      padding: 5px;
+    }
+    img {
+      margin: auto;
+      @include add-border(2px, $white-color, all);
+    }
+    span {
+      text-align: center;
+    }
+  }
+}

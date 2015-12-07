@@ -1,0 +1,32 @@
+/**
+* BASE - NORMALIZE
+*/
+
+.page-header {
+  margin-top: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $hs-font-weight;
+}
+
+/* Image Sizes */
+.img-xsm {
+  width: 100px;
+}
+
+.img-sm {
+  width: 200px;
+}
+
+.img-lg {
+  width: 400px;
+}
+
+.img-xlg {
+  width: 700px;
+}
+
+.clearfix {
+  clear: both;
+}
